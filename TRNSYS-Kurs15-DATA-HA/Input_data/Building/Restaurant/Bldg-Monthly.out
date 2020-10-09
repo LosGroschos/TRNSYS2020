@@ -1,0 +1,34 @@
+ **************************************************************
+ *        *
+ *               MONTHLY SUMMARY STANDARD REPORT        *
+ *        *
+ **************************************************************
+ 
+ SUMMARY VALUES FOR ALL ZONES COMBINED
+ ****************************************************
+   MONTH    HEATING     COOLING    INFILTR.    VENTILAT.   SOLAR_RAD. INT_GAINS
+    -        [KWH]       [KWH]      [KWH]       [KWH]      [KWH]        [KWH]
+   JAN     1.563E+03   1.111E+02  -1.675E+03  -4.533E+02   1.568E+02   3.942E+03
+   SUM     1.563E+03   1.111E+02  -1.675E+03  -4.533E+02   1.568E+02   3.942E+03
+   
+   
+ ZONE NUMBER IS   1
+ ****************************************************
+   MONTH    HEATING     COOLING    INFILTR.    VENTILAT.   SOLAR_RAD. INT_GAINS
+    -        [KWH]      [KWH]       [KWH]       [KWH]      [KWH]        [KWH]
+   JAN     1.465E+03   0.000E+00  -9.816E+02   0.000E+00   1.568E+02   1.371E+03
+   SUM     1.465E+03   0.000E+00  -9.816E+02   0.000E+00   1.568E+02   1.371E+03
+   
+ ZONE NUMBER IS   2
+ ****************************************************
+   MONTH    HEATING     COOLING    INFILTR.    VENTILAT.   SOLAR_RAD. INT_GAINS
+    -        [KWH]      [KWH]       [KWH]       [KWH]      [KWH]        [KWH]
+   JAN     9.766E+01   1.111E+02  -4.535E+02  -4.533E+02   0.000E+00   2.261E+03
+   SUM     9.766E+01   1.111E+02  -4.535E+02  -4.533E+02   0.000E+00   2.261E+03
+   
+ ZONE NUMBER IS   3
+ ****************************************************
+   MONTH    HEATING     COOLING    INFILTR.    VENTILAT.   SOLAR_RAD. INT_GAINS
+    -        [KWH]      [KWH]       [KWH]       [KWH]      [KWH]        [KWH]
+   JAN     0.000E+00   0.000E+00  -2.403E+02   0.000E+00   0.000E+00   3.100E+02
+   SUM     0.000E+00   0.000E+00  -2.403E+02   0.000E+00   0.000E+00   3.100E+02
