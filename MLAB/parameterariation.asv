@@ -1,0 +1,10 @@
+%% Init
+clc;
+clear;
+close all;
+%% Import Data
+d.1 = importfile('../DATA/Mappe1.xlsx');
+d.2 = importfile('../DATA/Mappe2.x');
+
+%% Plot
+
