@@ -7,186 +7,34 @@ Le Centre Scientifique et Technique du Batiment, Sophia Antipolis, France
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                            Release 16.xx.xxxx                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-Simulation log for: "C:\Users\Christian\Desktop\TrnSys\TRNSYS-Kurs15-DATA-HA\SDHW.trd"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+Simulation log for: "C:\Users\Christian\Documents\TRNSYS2020\TRNSYS-Kurs15-DATA-HA\SDHW.dck"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
  
 *** Notice at time        :         0.000000
     Generated by Unit     : Not applicable or not available
     Generated by Type     : Not applicable or not available
     Message               : The TRNSYS Executable (TRNExe.exe) and main DLL (TRNDll.dll) are located in "C:\Users\Christian\Desktop\TrnSys\Exe"
  
-*** Notice at time        :         0.000000
+*** Fatal Error at time   :         0.000000
     Generated by Unit     : Not applicable or not available
     Generated by Type     : Not applicable or not available
-    Message               : The following Types were loaded from TRNDll.dll: Type109, Type1, Type3, Type2, Type4, Type11, Type24, Type9, Type91, Type65, Type31, Type25
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type 803.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type 816.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type127.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type157.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type210.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type235.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type240.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "type320.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type340.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type358.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type362.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type62.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type805.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type890.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    Message               : "Type951.dll" was found but did not contain any components from the input file.
- 
-*** Notice at time        :         0.000000
-    Generated by Unit     : Not applicable or not available
-    Generated by Type     : Not applicable or not available
-    TRNSYS Message    199 : TRNSYS found at least one user DLL in the UserLib directory. (Note: Only DLL's including Types that are used in the simulation are loaded)
-    Reported information  : 0 user DLLs were loaded after searching in "C:\Users\Christian\Desktop\TrnSys\UserLib"
- 
-*** Notice at time        :      2207.750000
-    Generated by Unit     :    15
-    Generated by Type     :     9
-    Message               : The specified component model has exhausted the data supply and has rewound the data file to begin reading from the top of the data file.
- 
-*** Notice at time        :      4415.500000
-    Generated by Unit     :    15
-    Generated by Type     :     9
-    Message               : The specified component model has exhausted the data supply and has rewound the data file to begin reading from the top of the data file.
- 
-*** Notice at time        :      6623.250000
-    Generated by Unit     :    15
-    Generated by Type     :     9
-    Message               : The specified component model has exhausted the data supply and has rewound the data file to begin reading from the top of the data file.
- 
-*** Warning at time       :      8760.000000
-    Generated by Unit     :    21
-    Generated by Type     :    31
-    Message               : The pipe model has reported that the flow rate through the pipe during at least one of the timesteps was greater than the capacity of the pipe.  Users should be aware that at least one component in a closed piping loop should contain enough capacitance to hold at least one timesteps worth of fluid or a run-away solution may be encountered.
- 
-*** Warning at time       :      8760.000000
-    Generated by Unit     :    20
-    Generated by Type     :    31
-    Message               : The pipe model has reported that the flow rate through the pipe during at least one of the timesteps was greater than the capacity of the pipe.  Users should be aware that at least one component in a closed piping loop should contain enough capacitance to hold at least one timesteps worth of fluid or a run-away solution may be encountered.
+    TRNSYS Message     20 : The referenced variable used in this equation has not been defined in the TRNSYS input file. The equation begins with the string in "reported information"
+    Reported information  : A0 = %A0%=
  
 *** End of the simulation
-    Total Notices         :        21
-    Total Warnings        :         2
-    Total Fatal Errors    :         0
+    Total Notices         :         1
+    Total Warnings        :         0
+    Total Fatal Errors    :         1
  
-    Total TRNSYS Calculation Time     :            29.3000 seconds
-    Calculation time inside the Types :             6.9800 seconds
+    Total TRNSYS Calculation Time     :             0.8600 seconds
+    Calculation time inside the Types :             0.0000 seconds
  
     TRNSYS Calculation Time Breakdown by Unit Number
-    Unit    15 :           0.210000 seconds
-    Unit     2 :           1.980000 seconds
-    Unit     3 :           0.140000 seconds
-    Unit    11 :           0.100000 seconds
-    Unit    17 :           0.040000 seconds
-    Unit    21 :           1.660000 seconds
-    Unit     6 :           0.060000 seconds
-    Unit     7 :           0.680000 seconds
-    Unit    12 :           0.050000 seconds
-    Unit    22 :           0.020000 seconds
-    Unit    16 :           0.070000 seconds
-    Unit    18 :           0.040000 seconds
-    Unit     4 :           0.050000 seconds
-    Unit    13 :           0.010000 seconds
-    Unit    20 :           1.620000 seconds
-    Unit    28 :           0.000000 seconds
-    Unit    24 :           0.090000 seconds
-    Unit    29 :           0.070000 seconds
-    Unit    27 :           0.000000 seconds
-    Unit    19 :           0.090000 seconds
  
     TRNSYS Calculation Time Breakdown by Type Number
-    Type     1 :           0.140000 seconds
-    Type     2 :           0.060000 seconds
-    Type     3 :           0.090000 seconds
-    Type     4 :           0.680000 seconds
-    Type     9 :           0.210000 seconds
-    Type    11 :           0.150000 seconds
-    Type    24 :           0.030000 seconds
-    Type    25 :           0.000000 seconds
-    Type    31 :           3.280000 seconds
-    Type    65 :           0.290000 seconds
-    Type    91 :           0.070000 seconds
-    Type   109 :           1.980000 seconds
  
     TRNSYS Iterative Call Breakdown by Unit Number
-    Unit    15 :              70083 calls
-    Unit     2 :              70083 calls
-    Unit     3 :             155141 calls
-    Unit    11 :             109789 calls
-    Unit    17 :              35043 calls
-    Unit    21 :             125123 calls
-    Unit     6 :             163515 calls
-    Unit     7 :             194826 calls
-    Unit    12 :              79694 calls
-    Unit    22 :              35043 calls
-    Unit    16 :             148847 calls
-    Unit    18 :             105833 calls
-    Unit     4 :             153278 calls
-    Unit    13 :              35043 calls
-    Unit    20 :             120169 calls
-    Unit    28 :              35043 calls
-    Unit    24 :              35043 calls
-    Unit    29 :              35043 calls
-    Unit    27 :              35043 calls
-    Unit    19 :              35043 calls
+ 
+*** Simulation stopped with errors
+    Total Notices         :         1
+    Total Warnings        :         0
+    Total Fatal Errors    :         1
