@@ -19,17 +19,17 @@ Zur Erweiterung des Systems wird  zwischen dem Kollektor und dem Wärmeübertrag
 
 \begin{multline}
 	\label{eq:UA}
-UA = (\frac{1}{2*\pi*l}*(\frac{1}{\alpha_i*r_i}+\sum\frac{ln(\frac{r_{j+1}}{r_j})}{\lambda_j}+\frac{1}{\alpha_a*r_a}))^{-1} = (\frac{1}{2*\pi*\SI{9}{\meter}}\\*(\frac{1}{\SI{1000}{\watt\per\square\meter\per\kelvin}*\SI{0,0125}{\meter}}+\frac{ln(\frac{\SI{16}{\milli\meter}}{\SI{12,5}{\milli\meter}})}{\SI{380}{\watt\per\meter\per\kelvin}}+\frac{ln(\frac{\SI{66}{\milli\meter}}{\SI{16}{\milli\meter}})}{\SI{0,04}{\watt\per\meter\per\kelvin}}+\frac{1}{\SI{10}{\watt\per\meter\per\kelvin}*\SI{0,0666}{\meter}}))^{-1}=\SI{1,528}{\watt\per\kelvin}
+UA = (\frac{1}{2*\pi*l}*(\frac{1}{\alpha_i*r_i}+\sum\frac{ln(\frac{r_{j+1}}{r_j})}{\lambda_j}+\frac{1}{\alpha_a*r_a}))^{-1} = (\frac{1}{2*\pi*\SI{9}{\meter}}\\*(\frac{1}{\SI{1000}{\watt\per\square\meter\per\kelvin}*\SI{0,0125}{\meter}}+\frac{ln(\frac{\SI{16}{\milli\meter}}{\SI{12,5}{\milli\meter}})}{\SI{380}{\watt\per\meter\per\kelvin}}+\frac{ln(\frac{\SI{66}{\milli\meter}}{\SI{16}{\milli\meter}})}{\SI{0,04}{\watt\per\meter\per\kelvin}}\\+\frac{1}{\SI{10}{\watt\per\meter\per\kelvin}*\SI{0,0666}{\meter}}))^{-1}=\SI{1,528}{\watt\per\kelvin}
 \end{multline}
 
 
 \begin{equation}
 	\label{eq:U}
-	U=\frac{UA}{A}=\frac{\SI{1,528}{\watt\per\kelvin}}{\SI{0,70}{\square\meter}}=\SI{2,158}{\watt\per\square\meter\per\kelvin}
+	U=\frac{UA}{A_{Rohr}}=\frac{\SI{1,528}{\watt\per\kelvin}}{\SI{0,70}{\square\meter}}=\SI{2,158}{\watt\per\square\meter\per\kelvin}
 \end{equation}
 
 
-Zur Anpassung der Kapazitätsströme wird der Massenstrom der sekundärseitigen Pumpe anhand des Quotienten der Wärmekapazitäten der beiden Fluide angepasst. Beide Pumpen werden weiterhin mit dem gleichen Regelsignal angesteuert.
+Zur Anpassung der Kapazitätsströme wird der Massenstrom der sekundärseitigen Pumpe anhand des Quotienten der Wärmekapazitäten beider Fluide angepasst. Beide Pumpen werden weiterhin mit dem gleichen Regelsignal angesteuert:
 
 \begin{equation}
 	\label{eq:dotm}
@@ -38,19 +38,29 @@ Zur Anpassung der Kapazitätsströme wird der Massenstrom der sekundärseitigen 
 
 
 \subsection{Systemauslegung}
-Anhand der Wetterdaten von Stuttgart soll eine solare Deckung von 60\,\% für das vorliegende Zapfprofil erzielt werden.
-
-\begin{equation}
-	\label{eq:fsolin}
-	f_{sol,in} = \frac{Q_{sol}}{Q_{sol}+Q_{aux}}
-\end{equation}
+Anhand der Wetterdaten von Stuttgart soll eine solare Deckung von \SI{60}{\percent} für das vorliegende Zapfprofil erzielt werden. Zunächst wurde ein Durchlauf mit den Standardparametern durchgeführt, um den Gesamtwärmebedarf des Systems zu ermitteln. Dieser beträgt jährlich 3240\,kWh. Der solare Jahresertrag $q_{sol}$ wurde mit 450\,kWh pro m\textsuperscript{2} Kollektorfläche geschätzt. Daraus ergibt sich eine Kollektorfläche von
 
 \begin{equation}
 	\label{eq:}
-	f_{sol,out} = \frac{Q_{sol}-Q_{verl,Sp}}{Q_{TWW+RH}+Q_{Zirk}}
+	A_{kol}=\frac{Q_{Bedarf}*f_{sol}}{q_{sol}}=\frac{\SI{3240}{\kilo\watt\hour\per\square}*0,6}{\SI{450}{\kilo\watt\hour\per\square\meter}}=\SI{4,32}{\square\meter}
 \end{equation}
+
+Bei \SI{50}{\liter\per\square\meter} Speichervolumen entspricht dies einem 200..250\,l Speicher. Für die Simulation wurden beide Größen auf \SI{5}{\square\meter} respektive \SI{250}{\liter} aufgerundet und eine Solare Deckung von
+
+\begin{equation}
+	\label{eq:fsolin}
+	f_{sol,in} = \frac{Q_{sol}}{Q_{sol}+Q_{aux}} =
+\end{equation}
+beziehungsweise
+\begin{equation}
+	\label{eqfsolout:}
+	f_{sol,out} = \frac{Q_{sol}-Q_{verl,Sp}}{Q_{TWW+RH}+Q_{Zirk}}=
+\end{equation}
+unter Berücksichtigung der Verluste erzielt.
+
 \section{Parametervariation}
 \subsection{Kaltwasser- und Umgebungstemperatur des Speichers}
+Im Rahmen der Parametervariation wurden die Kaltwassertemperatur und die Umgebungstemperatur des Speicherraums in 5-Grad-Schritten von 5..30\si{\celsius} variiert. Insgesamt wurden somit 36 Simulationen durchgeführt. Abbildung \ref{fig:par1} zeigt die erzielte solare Deckung inklusive Verlusten.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../DATA/Aufgabe2.2.eps}
@@ -58,10 +68,10 @@ Anhand der Wetterdaten von Stuttgart soll eine solare Deckung von 60\,\% für da
 	\label{fig:par1}
 \end{figure}
 
-
-Mit zunehmender Raumtemperatur und Kaltwassertemperatur steigt die solare Deckung an. Die Zulauftemperatur hat hierbei den größeren Einfluss.
+Mit zunehmender Raumtemperatur und Kaltwassertemperatur steigt die solare Deckung an. Die Zulauftemperatur hat hierbei den größeren Einfluss von fast 10\,\%, da sie in direkt proportional in den Wärmebedarf einfließt. Die Speicherverluste spielen nur eine untergeordnete Rolle, da der Speicher isoliert ist. Innerhalb der Parametergrenzen unterscheidet sich die solare Deckung um etwa 3\,\%, was jährlich 100\,kWh mehr Solarertrag entspricht.
 
 \subsection{Rohrlänge und Dämmung}
+
 
 \begin{figure}[H]
 	\centering
