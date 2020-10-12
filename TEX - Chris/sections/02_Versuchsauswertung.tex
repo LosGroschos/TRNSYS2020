@@ -1,0 +1,74 @@
+\section{Modellierung}
+\subsection{Systembeschreibung}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../DATA/std_deck.png}
+	\caption[Grundsystem]{Grundsystem des Decks}
+	\label{fig:std_deck}
+\end{figure}
+
+Das System basiert auf einem Speicher mit integrierter Nachheizung und externem Wärmeübertrager, an welchen ein Kollektor mit Wetterdaten aus Stuttgart angeschlossen ist. Die Pumpen des Primär- und Sekundärkreislaufes des Wärmeübertragers werden per Temperaturdifferenzregelung angesteuert. Die Kollektortemperatur und die untere Speichertemperatur dienen dem Regler als Vergleichsgrößen. Die Regelung erfolgt als Ein- und Ausschaltsignal. Die Massenströme sind in den Pumpen selbst festgelegt. Ein Verteiler mit Zapfprofil versorgt den Speicher sowie einen Mischer mit Kaltwasser. Der Solare Wärmeeintrag in den Speicher und die Nachheizenergie werden über das Jahr integriert und graphisch ausgegeben.
+
+\subsection{Systemanpassung: Rohrverluste und Kapazitätsströme}
+Zur Erweiterung des Systems wird  zwischen dem Kollektor und dem Wärmeübertrager jeweils eine Rohrleitung in Vor- und Rücklauf installiert. Für Die Rohrlänge wurden \SI{9}{\meter} und für den Rohrdurchmesser \SI{2,5}{\centi\meter} angenommen, was zwei bis drei Etagenhöhen zuzüglich horizontaler Abschnitte und Verteilung auf dem Dach entspricht. Die Dicke der Dämmschicht wurde mit \SI{5}{\centi\meter} vorgegeben. Zur Bestimmung des Verlustkoeffizienten werden die Innenmantelfläche des Rohres sowie der UA-Wert benötigt.
+
+\begin{equation}
+	\label{eq:Arohr}
+	A_{Rohr} = 2*\pi*r*h = 2*\pi*\SI{0,0125}{\meter}*\SI{9}{\meter}=\SI{0,70}{\square\meter}
+\end{equation}
+
+\begin{multline}
+	\label{eq:UA}
+UA = (\frac{1}{2*\pi*l}*(\frac{1}{\alpha_i*r_i}+\sum\frac{ln(\frac{r_{j+1}}{r_j})}{\lambda_j}+\frac{1}{\alpha_a*r_a}))^{-1} = (\frac{1}{2*\pi*\SI{9}{\meter}}\\*(\frac{1}{\SI{1000}{\watt\per\square\meter\per\kelvin}*\SI{0,0125}{\meter}}+\frac{ln(\frac{\SI{16}{\milli\meter}}{\SI{12,5}{\milli\meter}})}{\SI{380}{\watt\per\meter\per\kelvin}}+\frac{ln(\frac{\SI{66}{\milli\meter}}{\SI{16}{\milli\meter}})}{\SI{0,04}{\watt\per\meter\per\kelvin}}+\frac{1}{\SI{10}{\watt\per\meter\per\kelvin}*\SI{0,0666}{\meter}}))^{-1}=\SI{1,528}{\watt\per\kelvin}
+\end{multline}
+
+
+\begin{equation}
+	\label{eq:U}
+	U=\frac{UA}{A}=\frac{\SI{1,528}{\watt\per\kelvin}}{\SI{0,70}{\square\meter}}=\SI{2,158}{\watt\per\square\meter\per\kelvin}
+\end{equation}
+
+
+Zur Anpassung der Kapazitätsströme wird der Massenstrom der sekundärseitigen Pumpe anhand des Quotienten der Wärmekapazitäten der beiden Fluide angepasst. Beide Pumpen werden weiterhin mit dem gleichen Regelsignal angesteuert.
+
+\begin{equation}
+	\label{eq:dotm}
+	\dot m_{2}=\dot m_{1}*\frac{c_{p,1}}{c_{p,2}}
+\end{equation}
+
+
+\subsection{Systemauslegung}
+Anhand der Wetterdaten von Stuttgart soll eine solare Deckung von 60\,\% für das vorliegende Zapfprofil erzielt werden.
+
+\begin{equation}
+	\label{eq:fsolin}
+	f_{sol,in} = \frac{Q_{sol}}{Q_{sol}+Q_{aux}}
+\end{equation}
+
+\begin{equation}
+	\label{eq:}
+	f_{sol,out} = \frac{Q_{sol}-Q_{verl,Sp}}{Q_{TWW+RH}+Q_{Zirk}}
+\end{equation}
+\section{Parametervariation}
+\subsection{Kaltwasser- und Umgebungstemperatur des Speichers}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../DATA/Aufgabe2.2.eps}
+	\caption[Parametervariation Kaltwasser und Speicher]{Parametervariation Kaltwasser und Speicher}
+	\label{fig:par1}
+\end{figure}
+
+
+Mit zunehmender Raumtemperatur und Kaltwassertemperatur steigt die solare Deckung an. Die Zulauftemperatur hat hierbei den größeren Einfluss.
+
+\subsection{Rohrlänge und Dämmung}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../DATA/Aufgabe2.3.eps}
+	\caption[Parametervariation Dämmung]{Parametervariation Dämmung}
+	\label{fig:par2}
+\end{figure}
+
+\section{Optimierung der Kollektorparameter}
+

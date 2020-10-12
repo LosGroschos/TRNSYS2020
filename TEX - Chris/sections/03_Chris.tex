@@ -1,0 +1,15 @@
+\section{Parametervariation	}
+\subsection{Aufgabenbeschreibung}
+
+Im dritten Teil der Arbeit wurde eine Optimierung der Simulationsparamter mittels Genopt durchgeführt. Für die Optimierung lagen die Messwerte eines Kollektors mit 5 m² Fläche vor. Über einen Zeitraum von 168 Stunden wurden im Viertel-Stunde-Takt die Auslasstemperatur $T_{out}$ Tag wie Nacht gemessen. Zwei Versuche wurden mit jeweils konstanter Zulauftemperatur von 20 °C bzw. 60 °C durchgeführt. Der Volumenstrom betrug während der Messung konstant $20\dfrac{kg}{h*m^2}$.
+
+Ziel der Optimierung war die Anpassung der Kollektorparameter  $\alpha_{0}, \alpha_{1} und \alpha_{2}$ an die Messergebnisse, sodass die Vorlauftemperatur aus dem Kollektormodell mit den Versuchsmesswerten übereinstimmt. 
+
+\begin{equation}
+	\label{eq:\eta}
+	\eta_{Kol} = \alpha_{0}-\alpha_{1}*\frac{(T_{in}-T_{amb})}{G_{t}}-\alpha_{2}*\frac{(T_{in}-T_{amb})^2}{G_{t}}
+\end{equation}
+
+\subsection{Simulationsdurchführung}
+
+Die Optimierung der Parameter erfolgte in zwei Simulationen für $T_{in,1} = 20 °C$ und $T_{in,2} = 60 °C$. Zunächst wurde dem Kollektormodell der gewünschte Volumenstrom und Eingangstemperatur als Inputgröße vorgegeben.  
