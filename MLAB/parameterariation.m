@@ -27,20 +27,35 @@ run plotsettings.m
 print('../DATA/Aufgabe2.2.eps','-depsc');
 
 %% Plot 
+figure
+coltitles = {'F_SOL_OUT','R','d','lambda'};
+for i=1:3
+  hAx(i)=subplot(1,3,i);
+  plot(d.daemm.(coltitles{i})(((i-1)*5+1):(i*5)),d.daemm.F_SOL_OUT(((i-1)*5+1):(i*5)))
+end
+linkaxes(hAx,'y')
+set(hAx,'ylim',[0.54 0.68])
 
-subplot(1,3,1,'replace')
-plot(d.daemm.R(1:3),d.daemm.F_SOL_OUT(1:3))
+
+figure
+grid on
+subplot(1,3,1)
+grid on
+plot(d.daemm.R(1:8),d.daemm.F_SOL_OUT(1:8),'--x')
 xlabel('Rohrlänge [m]')
 ylabel('$f_{sol,out}$')
 pbaspect([1 2 1])
-subplot(1,3,2,'replace')
-plot(d.daemm.d(4:6),d.daemm.F_SOL_OUT(4:6))
-xlabel('Dicke Dämmung [cm]')
+subplot(1,3,2)
+grid on
+plot(d.daemm.d(9:16),d.daemm.F_SOL_OUT(9:16),'--x')
+xlabel('Dämmstärke [mm]')
 ylabel('$f_{sol,out}$')
 pbaspect([1 2 1])
-subplot(1,3,3,'replace')
-plot(d.daemm.lambda(7:9),d.daemm.F_SOL_OUT(7:9))
+subplot(1,3,3)
+grid on
+plot(d.daemm.lambda(17:24),d.daemm.F_SOL_OUT(17:24),'--x')
 xlabel('$\lambda$ [$\frac{W}{m*K}$]')
 ylabel('$f_{sol,out}$')
 pbaspect([1 2 1])
+ylim=[0.54 0.68]
 print('../DATA/Aufgabe2.3.eps','-depsc');
