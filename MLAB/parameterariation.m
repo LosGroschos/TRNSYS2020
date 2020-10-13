@@ -5,7 +5,7 @@ close all;
 %% Import Data
 d.fsol = importfile('../DATA/Aufgabe2.2.xlsx');
 d.daemm = importfile1('../DATA/Aufgabe2.3.xlsx');
-
+d.opt = importfile2('../DATA/Aufgabe3vergleich.xlsx');
 
 %% Plot T-SP-Amb, T-KW
 names = {'$T_{Sp}$ = 5$^{\circ}C$','$T_{Sp}$ = 10$^{\circ}C$','$T_{Sp}$ = 15$^{\circ}C$','$T_{Sp}$ = 20$^{\circ}C$','$T_{Sp}$ = 25$^{\circ}C$','$T_{Sp}$ = 30$^{\circ}C$'}
@@ -27,15 +27,6 @@ run plotsettings.m
 print('../DATA/Aufgabe2.2.eps','-depsc');
 
 %% Plot 
-figure
-coltitles = {'F_SOL_OUT','R','d','lambda'};
-for i=1:3
-  hAx(i)=subplot(1,3,i);
-  plot(d.daemm.(coltitles{i})(((i-1)*5+1):(i*5)),d.daemm.F_SOL_OUT(((i-1)*5+1):(i*5)))
-end
-linkaxes(hAx,'y')
-set(hAx,'ylim',[0.54 0.68])
-
 
 figure
 grid on
@@ -59,3 +50,19 @@ ylabel('$f_{sol,out}$')
 pbaspect([1 2 1])
 ylim=[0.54 0.68]
 print('../DATA/Aufgabe2.3.eps','-depsc');
+
+
+
+temps = {'Sim.Out 60','Ref.Out 60','Sim.Out 20','Ref.Out 20'};
+figure
+grid on
+hold on
+plot(d.opt.TIME,d.opt.SimOutlet60)
+plot(d.opt.TIME,d.opt.Outlet60)
+plot(d.opt.TIME,d.opt.SimOutlet20)
+plot(d.opt.TIME,d.opt.Outlet20)
+xlabel('Zeitschritt in h')
+ylabel('Temperatur in $^{\circ}C$')
+pbaspect([3 1 1])
+legend(temps,'location','southoutside','NumColumns',4)
+print('../DATA/Aufgabe3vergleich.eps','-depsc');
